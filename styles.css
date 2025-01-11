@@ -1,0 +1,26 @@
+/* Custom CSS */
+
+table.plugins {
+
+  #the-list {
+
+    tr.red td,
+    tr.red th {
+      background-color: rgb(255, 208, 208);
+    }
+
+    tr.red th {
+      border-left: 4px solid red;
+    }
+
+    tr.green td,
+    tr.green th {
+      background-color: rgb(138, 216, 121);
+    }
+
+    tr.green th {
+      border-left: 4px solid #147514;
+    }
+
+  }
+}
