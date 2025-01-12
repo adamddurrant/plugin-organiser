@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     notes_value: notes_value,
                     nonce: pluginNotes.nonce
                 })
-            }).then(response => response.json()).then(data => {
+            })
+            .then(response => response.json()).then(data => {
                 if (data.success) {
                     location.reload();
                 }
@@ -116,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (data.success) {
                     // Apply the selected color class to the row
                     const pluginRow = select.closest('tr');
-                    pluginRow.className = ''; // Clear existing classes
                     if (selectedColor) {
                         pluginRow.classList.add(selectedColor);
                     }
