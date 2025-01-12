@@ -56,7 +56,7 @@ class NotesForPlugins {
                 <option value="">' . __('Select Color', 'notes-for-posts') . '</option>
                 <option value="red"' . selected($selected_color, 'red', false) . '>' . __('Red', 'notes-for-posts') . '</option>
                 <option value="green"' . selected($selected_color, 'green', false) . '>' . __('Green', 'notes-for-posts') . '</option>
-                <option value="blue"' . selected($selected_color, 'blue', false) . '>' . __('Blue', 'notes-for-posts') . '</option>
+                <option value="purple"' . selected($selected_color, 'purple', false) . '>' . __('Purple', 'notes-for-posts') . '</option>
             </select>
         </div>';
 

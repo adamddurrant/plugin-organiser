@@ -4,6 +4,7 @@ table.plugins {
 
   #the-list {
 
+    /* Red */
     tr.red td,
     tr.red th {
       background-color: rgb(255, 208, 208);
@@ -13,14 +14,26 @@ table.plugins {
       border-left: 4px solid red;
     }
 
+    /* Green */
     tr.green td,
     tr.green th {
-      background-color: rgb(138, 216, 121);
+      background-color: rgb(190, 255, 176);
     }
 
     tr.green th {
-      border-left: 4px solid #147514;
+      border-left: 4px solid #00a500;
+    }
+
+    /* Purple */
+    tr.purple td,
+    tr.purple th {
+      background-color: rgb(221, 176, 255);
+    }
+
+    tr.purple th {
+      border-left: 4px solid #7511d8;
     }
 
   }
 }
+
