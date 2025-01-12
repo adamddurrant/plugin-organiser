@@ -8,9 +8,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const saveButton = textarea.nextElementSibling;
             const deleteButton = saveButton.nextElementSibling;
 
+            // Toggle the note visibility
             textarea.style.display = (textarea.style.display === 'none' || textarea.style.display === '') ? 'block' : 'none';
             saveButton.style.display = (saveButton.style.display === 'none' || saveButton.style.display === '') ? 'inline-block' : 'none';
             deleteButton.style.display = (deleteButton.style.display === 'none' || deleteButton.style.display === '') ? 'inline-block' : 'none';
+
+            // Change the button text to '-' when the note section is open, otherwise '+' when closed
+            button.textContent = (textarea.style.display === 'none') ? '+ Add Note' : '- Add Note';
         });
     });
 
@@ -32,11 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     nonce: pluginNotes.nonce
                 })
             })
-            .then(response => response.json()).then(data => {
-                if (data.success) {
-                    location.reload();
-                }
-            });
+                .then(response => response.json()).then(data => {
+                    if (data.success) {
+                        location.reload();
+                    }
+                });
         });
     });
 
@@ -94,6 +98,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     console.log('Error updating row color');
                 }
             });
+        });
+    });
+
+    // Colour toggle
+    document.querySelectorAll('.change-color-toggle').forEach(function (toggle) {
+        toggle.addEventListener('click', function () {
+            const dropdown = this.nextElementSibling; // The <select> element
+            if (dropdown.style.display === 'none') {
+                dropdown.style.display = 'block';
+                toggle.innerHTML = '- Add Colour';
+            } else {
+                dropdown.style.display = 'none';
+                toggle.innerHTML = '+ Add Colour';
+            }
         });
     });
 
