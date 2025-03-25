@@ -47,18 +47,20 @@ class NotesForPlugins {
         }
 
         $plugin_meta[] = '<div class="plugin-note-container">
-            <a type="button" style="cursor: pointer; margin-top: 5px; display: block; ' . esc_attr($add_note_link_style) . '" class="toggle-plugin-notes">' . __('+ Add Note', 'notes-for-posts') . '</a>
+            <a type="button" style="cursor: pointer; margin-top: 5px; display: block;" class="toggle-plugin-notes">' . __('+ Add Note', 'notes-for-posts') . '</a>
             <textarea class="plugin-notes" data-plugin-key="' . esc_attr($notes_key) . '" style="width:100%; height:50px; display:none;">' . esc_textarea($notes) . '</textarea>
             <a class="save-plugin-notes button" style="margin-top: 5px; display:none;">' . __('Save Note', 'notes-for-posts') . '</a>
             <div class="saved-note" style="margin-top: 5px; display: ' . ($notes ? 'block' : 'none') . ';"><strong>' . esc_textarea($notes) . '</strong></div>
             <a class="delete-plugin-notes" style="margin-top: 5px; color:red; cursor: pointer; display:' . ($notes ? 'inline-block' : 'none') . ';">' . __('- Delete Note', 'notes-for-posts') . '</a>
-            <select class="plugin-row-color" data-plugin-key="' . esc_attr($color_key) . '" style="margin-top: 5px;">
+            <a class="change-color-toggle" style="margin-top: 5px; cursor: pointer; display: block;">' . __('+ Add Colour', 'notes-for-posts') . '</a>
+            <select class="plugin-row-color" data-plugin-key="' . esc_attr($color_key) . '" style="margin-top: 5px; display: none;">
                 <option value="">' . __('Select Color', 'notes-for-posts') . '</option>
                 <option value="red"' . selected($selected_color, 'red', false) . '>' . __('Red', 'notes-for-posts') . '</option>
                 <option value="green"' . selected($selected_color, 'green', false) . '>' . __('Green', 'notes-for-posts') . '</option>
                 <option value="purple"' . selected($selected_color, 'purple', false) . '>' . __('Purple', 'notes-for-posts') . '</option>
             </select>
         </div>';
+
 
         return $plugin_meta;
     }

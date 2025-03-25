@@ -1,5 +1,10 @@
 /* Custom CSS */
 
+.plugin-note-container {  
+  border-top: 1px solid black;
+  margin-top: 10px;
+}
+
 table.plugins {
 
   #the-list {
